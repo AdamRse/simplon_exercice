@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    container_name: mysql-python-app
+    restart: no
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app/src
+    extra_hosts:
+      - host.docker.internal:host-gateway
+networks: {}

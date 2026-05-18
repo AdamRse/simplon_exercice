@@ -1,0 +1,11 @@
+# Override uniquement utilisé par le devcontainer (pas par Dockge)
+# Garde le container vivant pour que Zed puisse s'y connecter
+
+services:
+  app:
+    restart: "no"
+    command: sleep infinity
+    volumes:
+      - ..:/app
+    env_file:
+      - .env
